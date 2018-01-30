@@ -1,7 +1,7 @@
 # Lesson 3: Javascript II (Control Flow, Comparison Operators, 'for' Loops, and Arrays)
 (Attention: These are the class notes for the [Lambda School](http://www.lambdaschool.com) pre-course instruction workshop. This is meant to serve as an accompaniment to the class)
 
-In this lesson we will cover: 
+In this lesson we will cover:
 
 * Comparison Operators (continued)
 * Control Flow (continued)
@@ -13,7 +13,7 @@ In this lesson we will cover:
 
 In the last lesson we touched on Comparison Operators, we will go a little more in depth as to how they work and then introduce a close relative of Comparison Operators, Logical Operators.
 
-In the last lesson we introduced our comparison operators, ( > >= < <= === !==). These operators work just as they would in a math class, greater than, less than, etc. We use these operators to evaluate two expressions. As the computer runs the code the operator will return either a true (if the statement is true) or a false. 
+In the last lesson we introduced our comparison operators, ( > >= < <= === !==). These operators work just as they would in a math class, greater than, less than, etc. We use these operators to evaluate two expressions. As the computer runs the code the operator will return either a true (if the statement is true) or a false.
 
 ```javascript
     1 > 2;     //false
@@ -32,7 +32,7 @@ The "triple equals" ( === ) must not be confused with a single equal sign (which
     'cat' === 'Cat';  //false
 ```
 
-The last comparison operator we would like to introduce you to has two parts to it. 
+The last comparison operator we would like to introduce you to has two parts to it.
 
 First is the "NOT" (!) when you see this it will mean that we are asking the opposite of the expression (we will revisit the NOT operator later in this lesson).
 
@@ -47,7 +47,7 @@ With that in mind, we can introduce the "not equals" ( !== ). This will return t
 
 ## Control Flow (continued)
 
-In the last lesson we learned about the "if" operator. We can use "if" to check and see if an expression is true, if it is, run some code. If it is not, skip the code and keep running the program. 
+In the last lesson we learned about the "if" operator. We can use "if" to check and see if an expression is true, if it is, run some code. If it is not, skip the code and keep running the program.
 
 ```javascript
     if (1 + 1 === 2){
@@ -91,10 +91,10 @@ The first logical operator we will look at is the "AND" operator. It is written 
     if (100 > 10 && 10 === 10){
         console.log("Both statements are true, so this code will be run");
     }
-    
+
     if (10 === 9 && 10 > 9){
         console.log("One of the statements is false, so the && will return false, this code will not be run");
-    } 
+    }
 ```
 
 ### ||
@@ -105,14 +105,14 @@ The next is the "OR" operator. It is written with two vertical bars (||). It wil
     if (100 > 10 || 10 === 10){
         console.log("Both statements are true, so this code will be run");
     }
-    
+
     if (10 === 9 || 10 > 9){
         console.log("One of the statements is true so the || will return true, this code will be run");
-    } 
+    }
 
     if (10 === 9 || 1 > 9){
         console.log("Both of the statements are false, so the || will return false. This code will not be run.");
-    } 
+    }
 ```
 
 ### !
@@ -135,7 +135,7 @@ A couple things to note about logical operators.
 
 * The expressions are evaluated in order, and the computer will skip any redundant expressions. In an && statement, if the first expression if false, the second expression will not be evaluated because BOTH expressions need to be true. Same for the || statement. If the first expression is true, the second will not be evaluated because there only needs to be one true statement to fulfill the requirements of the operator.
 
-* Use parentheses. As we saw in the second ! operator example, we used parentheses to evaluate what was inside of the parentheses FIRST, then applied the ! operator. We can wrap ANY expression in parentheses and it will be evaluated before evaluating the expression as a whole. 
+* Use parentheses. As we saw in the second ! operator example, we used parentheses to evaluate what was inside of the parentheses FIRST, then applied the ! operator. We can wrap ANY expression in parentheses and it will be evaluated before evaluating the expression as a whole.
 
 ## Introduction to Arrays
 
@@ -158,7 +158,7 @@ Just like the String data type has a built in .length method, so does the array.
 
 ### Accessing Items in an Array
 
-We can access an item at anytime in an array, we just need to call the item by its position in the array. Items are given a numerical position (index) according to where it is in the array, in order. An array's numerical order ALWAYS starts at 0, so the first item is in the 0 index, the second in the 1 index, the third in the 2, and so on (this can be tricky at first, but just remember arrays always start at 0). 
+We can access an item at anytime in an array, we just need to call the item by its position in the array. Items are given a numerical position (index) according to where it is in the array, in order. An array's numerical order ALWAYS starts at 0, so the first item is in the 0 index, the second in the 1 index, the third in the 2, and so on (this can be tricky at first, but just remember arrays always start at 0).
 
 ```javascript
     let studentsNames = ["Dan", "Maria", "Sara", "Raj"];
@@ -183,7 +183,7 @@ To access the last item in the array, we will use the .length method. In our stu
 
 ### Assignment
 
-We can assign and reassign any index in the array using the bracket/index and an =. 
+We can assign and reassign any index in the array using the bracket/index and an =.
 
 ```javascript
     let studentsNames = ["Dan", "Maria", "Sara", "Raj"];
@@ -235,11 +235,11 @@ Two more very useful built in array methods are .push and .pop. These methods re
 
 ### Notes on Arrays
 
-Because Javascript is not a strongly typed language, arrays do not need to be typed either. Arrays in Javascript can contains multiple different data types in the same array. 
+Because Javascript is not a strongly typed language, arrays do not need to be typed either. Arrays in Javascript can contains multiple different data types in the same array.
 
 ## for Loops
 
-Most software runs on loops, evaluating expressions over and over again until it either returns what we are looking for, or stops after a certain time. Javascript has two looping expressions built in to it and today we will look at the first one, the "for" loop. 
+Most software runs on loops, evaluating expressions over and over again until it either returns what we are looking for, or stops after a certain time. Javascript has two looping expressions built in to it and today we will look at the first one, the "for" loop.
 
 "for" loops have a unique syntax, similar to the "if" statement, but slightly more complex. First we have the "for" keyword, followed by parentheses and then open and close braces. Within the parentheses we will need three things. First, we must declare a variable, this is what the loop will be looping over. Then we will have a conditional expression, the loop will continue happening until this statement is false. Third, we will increment our variable. All three of these statements are separated by a semi-colon.
 
@@ -271,7 +271,7 @@ Most of the time, for loops are used to iterate over all of the items in an arra
 
 We saw in the last two examples the "++" operator. This is Javascript shorthand for "Set the value of the variable to it's current value plus one". There are a few more of these variable math/assignment shorthand expressions, we will visit them in upcoming lessons.
 
-### Infinite Loops. 
+### Infinite Loops.
 
 It is possible to get your loop stuck in what we call an "Infinite Loop". You must make sure there is a way for the loop to end, take for example this loop:
 
@@ -280,7 +280,7 @@ It is possible to get your loop stuck in what we call an "Infinite Loop". You mu
         console.log(i)
     }
 ```
-Because our conditional expression will ALWAS be true (i will never be less than 0) this loop will essentially run forever. This will break your program, and may crash your web browser, or computer.  
+Because our conditional expression will ALWAYS be true (i will never be less than 0) this loop will essentially run forever. This will break your program, and may crash your web browser, or computer.  
 
 ## Please open the homework folder and complete the assignment described in the README file
 
